@@ -1,0 +1,10 @@
+.btn_ford{
+    border-radius: 0;
+        font-size: 16px;
+        padding: 18px 8%;
+        &:hover{
+            border: 1px solid $color-black-0;
+            background-color: $color-white-0;
+            color: $color-blue-8;
+        }
+}

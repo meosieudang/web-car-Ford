@@ -1,0 +1,41 @@
+.search{
+    background-color: $color-black-1;
+    .navbar{
+        padding: 20px 0;
+        .input-group{
+            width: 25%;
+            display: flex;
+            .input-group-prepend{
+                .input-group-text{
+                    background-color: transparent;
+                    border: none;
+                    @include text($color-white-0, $fs-4 - 6, unset);
+                }
+            
+            }
+            .form-control{
+                align-self: center;
+                background-color: transparent;
+                border: transparent;
+                @include text($color-white-0, $fs-3, unset);
+            }
+        }
+        .search_navbar{
+            .nav-item{
+                .nav-link{
+                    @include text($color-black-6, 0.9rem, unset);
+                    &:hover, &.active{
+                        color: $color-white-0;
+                    }
+                }
+            }
+        }
+    }
+    @include reponds-to('medium'){
+        .navbar{
+            .input-group{
+                display: none;
+            }
+        }
+    }
+}

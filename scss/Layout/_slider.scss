@@ -1,0 +1,102 @@
+.slider{
+    margin-top: 87px;
+    .carousel-inner{
+        height: 580px;
+        .carousel-item{
+            .slider_img1{
+                background: url(../img/b1.jpeg) no-repeat;
+                @include slider();
+                height: 580px;
+            }
+            .slider_img2{
+                background: url(../img/b2.jpeg) no-repeat;
+                @include slider();
+                height: 580px;
+            }
+            .slider_img3{
+                background: url(../img/b3.jpeg) no-repeat;
+                @include slider();
+                height: 580px;
+            }
+            .slider_caption{
+                position: absolute;
+                top: 14%;
+                left: 4%;     
+                h2{
+                    @include text($color-white-0, $fs-4, unset);
+                }
+                span{
+                    @include text($color-white-0, $fs-0 + 1, unset);
+                }
+                i{
+                    @include text($color-white-0, $fs-3 + 6, unset);
+                }     
+            }
+            
+        }
+        &:hover{
+            
+                .slider_prev{
+                    transform: translateX(0);
+                    
+                }
+                .slider_next{
+                    transform: translateX(0);
+                }
+            
+        }
+    }
+    // @include responds-to('extra-large'){
+    //     font-size: 14px;
+    // }
+    // @include responds-to('large'){
+
+    // }
+    @include reponds-to('medium'){
+        .carousel-inner{
+            height: 450px;
+            .carousel-item{
+                .slider_img1, .slider_img2, .slider_img3{
+                    height: 450px;
+                    
+                }
+                .slider_caption{
+                    top: 5%;
+                    h2{
+                        text-align: center;
+                    }
+                    span{
+                        margin-left: 40%;
+                    }
+                }
+            }
+            .slider_prev, .slider_next{
+                display: none;;
+            }
+        }
+    }
+    @include reponds-to('small'){
+        .carousel-inner{
+            height: 450px;
+            .carousel-item{
+                .slider_img1, .slider_img2, .slider_img3{
+                    height: 450px;
+                }
+                .slider_caption{
+                    top: 7%;
+                    left: 6%;
+                    h2{
+                        text-align: center;
+                        font-size: 24px;
+                    }
+                    span{
+                        margin-left: 35%;
+                    }
+                }
+            }
+            .slider_prev, .slider_next{
+                display: none;;
+            }
+        }
+    }
+}

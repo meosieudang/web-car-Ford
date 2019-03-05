@@ -1,0 +1,44 @@
+.build{
+    background: url(../img/drive.jpeg) no-repeat;
+    background-size: cover;
+    height: 600px;
+    position: relative;
+    .build_intro{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        h4{
+        @include text($color-white-0, $fs-5 + 2, unset);
+    }
+        a{
+            width: 100%;
+        }
+    }
+    @include reponds-to('large'){
+        .build_intro{
+            h4{
+                font-size: 30px;
+            }
+            a{
+                font-size: 16px;
+            }
+            .btn_ford{
+                padding: 6% 25%;
+            }
+        }
+    }
+    @include reponds-to('small'){
+        .build_intro{
+            h4{
+                font-size: 24px;
+            }
+            a{
+                font-size: 16px;
+            }
+            .btn_ford{
+                padding: 6% 25%;
+            }
+        }
+    }
+}

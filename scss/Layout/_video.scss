@@ -1,0 +1,53 @@
+.video{
+    .video_intro{
+        h2{
+            @include text($color-black-1, $fs-5 + 2, $fw-bold-1 + 200);
+        }
+        p{
+            @include text($color-black-1, $fs-0 + 1, unset);
+            padding: 2% 23%;
+        }
+        .video_item{
+            position: relative;
+            a{
+                position: absolute;
+                top: 50%;
+                color: white;
+                font-size: 45px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100px;
+                height: 95px;
+                line-height: 90px;
+                border-radius: 50%;
+                background-color: transparent;
+                border: solid;
+                &:hover{
+                    color: $color-blue-1;
+                }
+            }
+        }
+    }
+    @include reponds-to('large'){
+        .video_intro{
+            padding: 0 !important;
+            h2{
+                font-size: 30px;
+            }
+            p{
+                padding: 2% 11%;
+            }
+        }
+    }
+    @include reponds-to('small'){
+        .video_intro{
+            padding: 0 !important;
+            h2{
+                font-size: 24px;
+            }
+            p{
+                padding: 2% 11%;
+            }
+        }
+    }
+}

@@ -1,0 +1,279 @@
+.header{
+    .header_brand{
+        width: 10%;
+        margin-right: 3%;
+        img{
+            width: 100%;
+        }
+    }
+    .header_navbar_collapse{
+        position: relative;
+        .nav_left{
+            .nav-item{
+                .nav-link{
+                    @include text($color-blue-0, $fs-2 - 2, unset);
+                }
+                .header_collapse{
+                    position: absolute;
+                    top: 152%;
+                    left: -20%;
+                    background-color: $color-white-2;
+                    width: 125%;
+                    &::before{
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        z-index: 5;
+                        box-shadow: 0 2px 2px rgba(0,0,0,0.12) inset;
+                        height: 5px;
+                    }
+                    .accordion{
+                        display: none;
+                    }
+                    .nav{
+                        padding: 1.5% 0;
+                        padding-left: 17%;
+                        // background-color: #fafafa;
+                        .nav-item{
+                            position: relative;
+                            .nav-link{
+                                background-color: transparent;
+                                border: none;
+                                // background-color: #fafafa;
+                                @include text($color-blue-0, $fs-0, unset);
+                                &::after{
+                                    content: '';
+                                    display: block;
+                                    border-bottom: 3px solid $color-black-0;    
+                                    width: 0%;
+                                    transition: all 0.5s;
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: -55%;
+                                }
+                                &:hover::after, &.active::after{
+                                    width: 100%;
+                                }
+                                &.active{
+                                    color: $color-black-0;
+                                }
+                                &:hover::after{
+                                    border-bottom: 3px solid $color-blue-1;
+                                }
+                            }
+                        }
+                    }
+                    .tab-content{
+                        // background-color: $color-white-0;
+                        .header_collapse_item{
+                            a{
+                                    text-decoration: none;
+                                
+                                img{
+                                        width: 100%;
+                                    }
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .nav_right{
+            .nav-item{
+                margin-left: 20px;
+                .nav-link{
+                    display: flex;
+                    align-items: center;
+                    @include text($color-blue-0, $fs-1 + 1, unset);
+                    i{
+                        @include text($color-blue-1, $fs-4 - 10, unset);
+                    }
+                    span{
+                        margin-left: $mg-1 + 5;
+                    }
+                }
+            }
+        }
+    }
+    .icon_sign{
+        display: none;
+        font-size: 35px;
+    }
+    @include reponds-to('extra-large'){
+        .header_navbar_collapse{
+            .nav_left{
+                .nav-item{
+                    .header_collapse{
+                        width: 126%;
+                        .accordion{
+                            display: none;
+                        }
+                        .nav{
+                            padding: 1.5% 13%;
+                            text-align: center;
+                            flex-wrap: unset;
+                            .nav-item{
+                                // margin: auto;
+                                margin-right: auto;
+                                .nav-link{
+                                    background-color: transparent;
+                                    &::after{
+                                        bottom: -28%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .nav_right{
+                .header_locate, .header_search, .header_lang, .header_sign{
+                        span{
+                            display: none;
+                        }
+                }
+            }
+        }
+    }
+    @include reponds-to('large'){
+        .header_navbar_collapse{
+            .nav_left{
+                .nav-item{
+                    .header_collapse{
+                        top: 117%;
+                        .nav{
+                            padding: 1.5% 8%;
+                            text-align: center;
+                            flex-wrap: unset;
+                            .nav-item{
+                                // margin: auto;
+                                margin-right: auto;
+                                .nav-link{
+                                    font-size: 14px;
+                                    &::after{
+                                        bottom: -23%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include reponds-to('medium'){
+            .header_brand{
+                width: 21%;
+            }
+            .header_navbar_collapse{
+                overflow-y: auto;
+                height: 343px;
+                .nav_left{
+                    .nav-item{
+                        .nav-link{
+                            &::after{
+                                content: '';
+                                display: block;
+                                border-bottom: 1px dotted $color-blue-0;    
+                                width: 100%;
+                            }
+                        }
+                        .header_collapse{
+                            position: unset;
+                            width: 100%;
+                            background-color: $color-white-0;
+                            .accordion{
+                                display: block;
+                                .card{
+                                    .card-header{
+                                        background-color: transparent;
+                                        button:hover{
+                                            text-decoration: none;
+                                        }
+                                    }
+                                }
+                            }
+                            .nav{
+                                display: none;
+                            }
+                            .tab-content{
+                                display: none;
+                            }
+                            
+                        }
+                    }
+                }
+                .nav_right{
+                    .header_locate, .header_search, .header_lang{
+                            span{
+                                display: none;
+                            }
+                    }
+                    .header_sign{
+                        span{
+                                display: none;
+                            }
+                    }
+                }
+            }
+            .icon_sign{
+                display: block;
+            }
+        }
+    }
+    @include reponds-to('small'){
+            .header_brand{
+                width: 30%;
+            }
+            .header_navbar_collapse{
+                .nav_left{
+                    .nav-item{
+                        .header_collapse{
+                            .nav{
+                                // padding: 1.5% 23%;
+                                .nav-item{
+                                    // margin-right: 40px;
+                                    // margin: auto;
+                                    .nav-link{
+                                        // &::after{
+                                        //     left: 0;
+                                        //     bottom: 15%;
+                                        // }
+                                    }
+                                }
+                            }
+                            .tab-content{
+                                // width: 100%;
+                                // .tab-pane{
+                                //     overflow-y: scroll;
+                                //     height: 285px;
+                                //     .header_collapse_item{
+                                //         img{
+                                //             width: 100%;
+                                //         }
+                                //     }
+                                // }
+                            }
+                            
+                        }
+                    }
+                }
+                .nav_right{
+                    .header_locate, .header_search, .header_lang{
+                            span{
+                                display: none;
+                            }
+                    }
+                    .header_sign{
+                        span{
+                                display: none;;
+                            }
+             }
+         }
+    }
+}
+

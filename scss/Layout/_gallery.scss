@@ -1,0 +1,124 @@
+.gallery{
+    // margin-bottom: 10%;
+    position: relative;
+    .gallery_intro{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        h2{
+            font-size: 2rem;
+            line-height: 1rem;
+        }
+        h3{
+            @include text($color-black-4, $fs-0 + 1, $fw-bold);
+        }
+    }
+    .gallery_item{
+        position: relative;
+        img{
+            width: 100%;
+        }
+        
+    }
+    .gallery_left{
+        .gallery_info{
+            top: 84.1%;
+            padding: 20px 10px;
+            span:first-child{
+                font-size: 21px;
+            }
+        }
+    }
+    .gallery_right{
+        .gallery_2{
+            display: block;
+        }
+    }
+    .gallery_collapse{
+        display: none;
+        width: 100%;
+        height: 70px;
+        background-color: $color-blue-0;
+        text-align: center;
+        line-height: 70px;
+        a{
+            text-decoration: none;
+            color: $color-white-0;
+            font-size: 30px;
+        }
+    }
+    .gallery_3{
+        display: none;
+    }
+    @include reponds-to('large'){
+        margin-bottom: 0;
+        .gallery_intro{
+            width: 73%;
+        }
+        .gallery_info{
+            top: 75%;
+        }
+        .gallery_left{
+            .gallery_info{
+                top: 78%;
+            }
+        }
+    }
+    @include reponds-to('medium'){
+        margin-bottom: 10%;
+        .gallery_1{
+            width: 100%;
+            height: 100px;
+            .gallery_intro{
+                width: 100%;
+                h2{
+                    font-size: 28px;
+                    
+                padding: 0 !important;
+                margin:  0 !important;
+                }
+                h3{
+                    display: none;
+                }
+            }
+        }
+        .gallery_info{
+                top: 93%; 
+                span:last-child{
+                    font-size: 30px;
+                }
+        }
+        .gallery_left{
+            .gallery_info{
+                top: 83%;
+            }
+        }
+        .gallery_right{
+            display: block !important;
+            .gallery_2{
+                display: none;
+            }
+        }
+        .gallery_collapse{
+            display: block;
+            position: absolute;
+            top: 100%;
+            i{
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                border-radius: 50%;
+                border: 1px solid;
+                font-size: 20px;
+            }
+        }
+        
+    }
+    @include reponds-to('small'){
+        .gallery_info{
+            top: 91%; 
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@mixin text($color, $fs, $fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin slider() {
+    background-size: cover;
+    background-position: center center;
+}
+@mixin reponds-to($breakpoint){
+    @if map-has-key($map: $breakpoints, $key: $breakpoint ){
+        $value : map-get($map: $breakpoints, $key: $breakpoint );
+        @media screen and (max-width: $value){
+            @content
+        }
+    }
+    @else {
+        @warn "`{$breakpoint}` isn't in breakpoints";
+    } 
+}

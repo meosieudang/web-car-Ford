@@ -1,0 +1,93 @@
+.footer{
+    background-color: $color-black-2;
+    padding: 4% 0;
+    .footer_item{
+        h2{
+            @include text($color-white-0, $fs-0 + 2, unset);
+            margin-bottom: 2rem;
+        }
+        ul{
+            list-style: none;
+                li{
+                    line-height: 2;
+                    a{
+                        text-decoration: none;
+                        @include text($color-black-6, $fs-0, unset);
+                        &:hover{
+                            color: $color-white-0;
+                        }
+                    }
+                }
+            }
+        }
+    @include reponds-to('large'){
+        .footer_all_ul{
+            h2::after{
+                display: none;
+            }
+            ul{
+                padding-left: 0;
+            }
+        }
+        .footer_collapse{
+            .card{
+                border-left: none;
+                border-right: none;
+                border-radius: 0px;
+                .card-header{
+                    padding-left: 0;
+                    background-color: $color-black-2;
+                    border-radius: 0;
+                    button{
+                        text-decoration: none;
+                        padding-left: 0;
+                        h2{
+                            @include text($color-white-0, $fs-0 + 2, unset);
+                        }
+                    }
+                }
+                .card-body{
+                    background-color: $color-black-2;
+                    // padding-left: 0;
+                }
+            }
+        }
+    }
+    @include reponds-to('medium'){
+        .footer_all_ul{
+            h2::after{
+                content: '';
+                display: block;
+                height: 1px;
+                border-bottom: 1px solid white;
+                padding-top: 1.25rem;
+            }
+            ul{
+                padding-left: 1.25rem;
+            }
+        }
+        .footer_collapse{
+            .card{
+                border-left: none;
+                border-right: none;
+                border-radius: 0px;
+                .card-header{
+                    padding-left: 0;
+                    background-color: $color-black-2;
+                    border-radius: 0;
+                    button{
+                        text-decoration: none;
+                        padding-left: 0;
+                        h2{
+                            @include text($color-white-0, $fs-0 + 2, unset);
+                        }
+                    }
+                }
+                .card-body{
+                    background-color: $color-black-2;
+                    // padding-left: 0;
+                }
+            }
+        }
+    }
+ }

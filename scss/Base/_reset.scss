@@ -1,0 +1,12 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(../font/ANTENNA-LIGHT.OTF);
+   
+}
+*{
+    font-family: myFirstFont;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}

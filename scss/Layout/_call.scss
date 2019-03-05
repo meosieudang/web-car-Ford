@@ -1,0 +1,35 @@
+.call{
+    background-color: $color-white-1;
+    .call_intro{
+        h2{
+            @include text($color-red-0, $fs-5 + 2, unset);
+        }
+        a{
+            background-color: $color-red-0;
+            &:hover{
+                background-color: $color-white-0;
+                color: $color-red-0;
+                border: 1px solid $color-red-0;
+            }
+        }
+    }
+    @include reponds-to('medium'){
+        // margin-top: 40px;
+        .call_intro{
+            .btn_ford{
+                padding: 18px 23%;
+            }
+        }
+    }
+    @include reponds-to('small'){
+        .call_intro{
+            h2{
+                padding-top: 15%;
+                font-size: 24px;
+            }
+            .btn_ford{
+                padding: 18px 22%;
+            }
+        }
+    }
+}
